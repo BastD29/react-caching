@@ -1,11 +1,15 @@
 import { FC } from "react";
-import { useCachedFetch } from "../../hooks/useCachedFetch";
+// import { useCachedFetch } from "../../hooks/useCachedFetch";
 import { User } from "../../types/user";
 import LoaderLayout from "../../components/layouts/LoaderLayout/LoaderLayout";
+import { useFetch } from "../../hooks/useFetch";
 import style from "./Store.module.scss";
 
 const Store: FC = () => {
-  const [data, loading, error] = useCachedFetch<User[]>(
+  // const [data, loading, error] = useCachedFetch<User[]>(
+  //   `https://jsonplaceholder.typicode.com/users`
+  // );
+  const [data, loading, error] = useFetch<User[]>(
     `https://jsonplaceholder.typicode.com/users`
   );
 

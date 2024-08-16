@@ -1,10 +1,10 @@
 // import { FC } from "react";
-// import useFetch from "../../hooks/useFetch";
+// import useCachingFetch from "../../hooks/useCachingFetch";
 // import LoaderLayout from "../../components/layouts/LoaderLayout/LoaderLayout";
 // import style from "./Store.module.scss";
 
 // const Store: FC = () => {
-//   const { loading, error, data, refetch } = useFetch({
+//   const { loading, error, data, refetch } = useCachingFetch({
 //     url: "https://randomuser.me/api",
 //     method: "get",
 //     key: ["app", "get", "user", { name: "nisab" }],
