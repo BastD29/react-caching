@@ -24,6 +24,7 @@ export const CacheProvider: FC<CacheProviderPropsType> = ({ children }) => {
 
   function getCache(key: string) {
     const cacheValue = map.get(key);
+    console.log("cacheValue:", cacheValue);
     if (!cacheValue) return undefined;
     if (new Date().getTime() > cacheValue.expiry.getTime()) {
       map.delete(key);
@@ -34,6 +35,7 @@ export const CacheProvider: FC<CacheProviderPropsType> = ({ children }) => {
 
   function setCache(key: string, value: any, ttl: number = 10) {
     var t = new Date();
+    console.log("t:", t);
     t.setSeconds(t.getSeconds() + ttl);
     map.set(key, {
       expiry: t,
